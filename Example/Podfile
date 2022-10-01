@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '10.0'
+
+target 'QS-iOS-Utils_Example' do
+  pod 'QS-iOS-Utils', :path => '../'
+
+  target 'QS-iOS-Utils_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
