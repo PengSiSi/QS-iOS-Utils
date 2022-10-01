@@ -4,7 +4,11 @@ platform :ios, '10.0'
 
 target 'QS-iOS-Utils_Example' do
   pod 'QS-iOS-Utils', :path => '../'
-
+  ## 第一种方式
+  # pod 'SGQRCode', :path=> '../SGQRCode'
+#  pod 'SGQRCode', :git => 'https://github.com/kingsic/SGQRCode.git'
+#  pod 'YYModel', :git => 'https://github.com/ibireme/YYModel.git'
+  
   target 'QS-iOS-Utils_Tests' do
     inherit! :search_paths
 

@@ -1,0 +1,27 @@
+PODS:
+  - QS-iOS-Utils (0.1.0):
+    - SGQRCode
+    - YYModel
+  - SGQRCode (3.5.1)
+  - YYModel (1.0.4)
+
+DEPENDENCIES:
+  - QS-iOS-Utils (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - SGQRCode
+    - YYModel
+
+EXTERNAL SOURCES:
+  QS-iOS-Utils:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  QS-iOS-Utils: 05a53c3372f2519d9eac22acd0b75be7a427dd69
+  SGQRCode: 65d6170ddcf3feecc6e2f3601aac78ad93e56589
+  YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
+
+PODFILE CHECKSUM: 6fc3fd64e8e5db6e6b1ce1744013d2839fd1ab2e
+
+COCOAPODS: 1.11.3

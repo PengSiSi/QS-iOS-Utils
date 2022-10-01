@@ -1,0 +1,6 @@
+framework module QSTestUtils {
+  umbrella header "QSTestUtils.h"
+
+  export *
+  module * { export * }
+}

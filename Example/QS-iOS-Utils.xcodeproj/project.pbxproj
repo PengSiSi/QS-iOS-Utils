@@ -63,10 +63,10 @@
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7F9C6DAD370A50624F0EC072 /* Pods-QS-iOS-Utils_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QS-iOS-Utils_Example.release.xcconfig"; path = "Target Support Files/Pods-QS-iOS-Utils_Example/Pods-QS-iOS-Utils_Example.release.xcconfig"; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		9B82F178BA046F9CEB0734D1 /* QS-iOS-Utils.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = "QS-iOS-Utils.podspec"; path = "../QS-iOS-Utils.podspec"; sourceTree = "<group>"; };
-		AB5F3E2A413893C3DFF545DA /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		9B82F178BA046F9CEB0734D1 /* QS-iOS-Utils.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = "QS-iOS-Utils.podspec"; path = "../QS-iOS-Utils.podspec"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		AB5F3E2A413893C3DFF545DA /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		DE3C191FB901244E0F0D5980 /* Pods_QS_iOS_Utils_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QS_iOS_Utils_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		ED21478552E2A8B22DD1E7D4 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		ED21478552E2A8B22DD1E7D4 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,7 +193,6 @@
 				4C98A127691EFD79B550781B /* Pods-QS-iOS-Utils_Tests.debug.xcconfig */,
 				067EFF6550374F4F8862A2E1 /* Pods-QS-iOS-Utils_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -248,6 +247,9 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "彭思";
 				TargetAttributes = {
+					6003F589195388D20070C39A = {
+						DevelopmentTeam = P6Y92UWTF6;
+					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
 					};
@@ -258,6 +260,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -302,11 +305,17 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-QS-iOS-Utils_Example/Pods-QS-iOS-Utils_Example-frameworks.sh",
+				"${PODS_ROOT}/../../QSTestUtils.framework",
 				"${BUILT_PRODUCTS_DIR}/QS-iOS-Utils/QS_iOS_Utils.framework",
+				"${BUILT_PRODUCTS_DIR}/SGQRCode/SGQRCode.framework",
+				"${BUILT_PRODUCTS_DIR}/YYModel/YYModel.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/QSTestUtils.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/QS_iOS_Utils.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SGQRCode.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYModel.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -494,11 +503,12 @@
 			baseConfigurationReference = 3C37B3B9BE64B30CCF2C5B7B /* Pods-QS-iOS-Utils_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = P6Y92UWTF6;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "QS-iOS-Utils/QS-iOS-Utils-Prefix.pch";
 				INFOPLIST_FILE = "QS-iOS-Utils/QS-iOS-Utils-Info.plist";
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = com.chinacreator.cn.C2TestSDK;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				WRAPPER_EXTENSION = app;
@@ -510,11 +520,12 @@
 			baseConfigurationReference = 7F9C6DAD370A50624F0EC072 /* Pods-QS-iOS-Utils_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = P6Y92UWTF6;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "QS-iOS-Utils/QS-iOS-Utils-Prefix.pch";
 				INFOPLIST_FILE = "QS-iOS-Utils/QS-iOS-Utils-Info.plist";
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = com.chinacreator.cn.C2TestSDK;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				WRAPPER_EXTENSION = app;

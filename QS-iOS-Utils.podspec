@@ -21,22 +21,26 @@ Pod::Spec.new do |s|
 TODO: Add long description of the pod here.
                        DESC
 
-  s.homepage         = 'https://github.com/彭思/QS-iOS-Utils'
+  s.homepage         = 'https://github.com/PengSiSi/QS-iOS-Utils'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { '彭思' => '1299625033@qq.com' }
-  s.source           = { :git => 'https://github.com/彭思/QS-iOS-Utils.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/PengSiSi/QS-iOS-Utils.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '10.0'
 
   s.source_files = 'QS-iOS-Utils/Classes/**/*'
-  
+  s.swift_version = '5'
+  s.resource = 'QS-iOS-Utils/Assets/QSUtils.bundle'
   # s.resource_bundles = {
   #   'QS-iOS-Utils' => ['QS-iOS-Utils/Assets/*.png']
   # }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+   s.vendored_framework = '*.framework'
+   s.dependency 'SGQRCode'
+   s.dependency 'YYModel'
+
 end

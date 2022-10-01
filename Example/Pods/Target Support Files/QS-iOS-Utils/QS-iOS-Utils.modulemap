@@ -1,0 +1,6 @@
+framework module QS_iOS_Utils {
+  umbrella header "QS-iOS-Utils-umbrella.h"
+
+  export *
+  module * { export * }
+}
